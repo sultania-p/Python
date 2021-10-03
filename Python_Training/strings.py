@@ -26,8 +26,6 @@
 #
 # print()
 
-parrot = "Norwegian Blue"
-print(parrot)
 # print(parrot[3])
 # print(parrot[4])
 # print()
@@ -44,13 +42,53 @@ print(parrot)
 # print(parrot[-8])
 # print(parrot[-6])
 
-# Slicing...
-# Start, stop and step values
-print(parrot[0:6])  # Norweg - Stop index is not counted, upto but not including
-
+# # Slicing...
+# # Start, stop and step values
+# print(parrot[0:6])  # Norweg - Stop index is not counted, upto but not including
+# print(parrot[3:5])
+# print(parrot[2:])
+# print(parrot[:5])
+# print(parrot[10:])
+#
+# a = 3
+# b = 5
+# print(parrot[a:b])
+#
+# print(parrot[:20])
+# #print(parrot[16:])  # blank as index does not found for start character
+# print(parrot[2:33])
+# #print(parrot[22])
+# print("")
+# print(parrot[0:6] + parrot[6:])
+# print(parrot[:])    # if no start and end then it will take whole string
 
 # for i in range(1,10):
 #     print(i)
+#print(parrot)
 
-print(1+2)
+# print(parrot[-4:2])  # it cannot go ahead after staring from back string
+# print(parrot[-4:-2])    #Bl; -2 is upto not included
+# print(parrot[-4:12])    #Bl 12 is found before ending the string
+# print(parrot[4:-6])
+# print(parrot[4:-16])
+# print(parrot[4:2])
+# print(parrot[-18:6])
+# print(parrot[-14:-6])
 
+#                   1
+#         01234567890123
+parrot = "Norwegian Blue"
+print(parrot[0:6:2])
+print(parrot[0:6:3])
+print(parrot[-1:10:2])  # 3rd part is step of 2 characters means jump every 2nd char and so on...
+
+number = "1,234,567:890 123;456|445"
+print(number[1::2])
+print(number[1::3])
+#print(number[1::4])
+
+separators = number[1::4]
+print(separators)
+
+values = "".join(char if char not in separators else " " for char in number).split()
+print([int(val) for val in values])
