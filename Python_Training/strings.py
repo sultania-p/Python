@@ -52,4 +52,5 @@ print(parrot[0:6])  # Norweg - Stop index is not counted, upto but not including
 # for i in range(1,10):
 #     print(i)
 
+print(1+2)
 
