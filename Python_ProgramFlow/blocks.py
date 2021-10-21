@@ -15,7 +15,7 @@ print(age)
 
 if (age < 18):
     print("Please return after {0} years to vote".format(18 - age))
-elif (age == 18):
+elif (age == 200):
     print("Process in progress to determine the voting this time . Please wait!!")
 else:
     print("You can vote now")
